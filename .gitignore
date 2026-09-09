@@ -1,0 +1,31 @@
+# Dependency directories
+node_modules/
+client/node_modules/
+
+# Build directories
+portals/
+classes/
+target/
+test-classes/
+
+# Local configuration files
+*.local
+java/project.properties
+.admin/
+**/.DS_Store
+**/.env
+**/.env.*
+!client/.env
+.history/
+
+# cache
+*.tsbuildinfo
+**/__pycache__/
+.classpath
+.project
+.settings/
+
+# SEMOSS environment config & credentials (commit only the .example files)
+.mcp.json
+semoss_config/environments.json
+semoss_config/credentials.env
