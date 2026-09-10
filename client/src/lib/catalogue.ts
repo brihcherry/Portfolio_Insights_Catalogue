@@ -35,12 +35,12 @@ export const CATALOGUE_CATEGORIES: CatalogueCategory[] = [
 			{
 				name: "System Similarity",
 				slug: "system-similarity",
-				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/app/910611b7-b6e5-491c-9d4c-0ca5f6f4224f/view",
+				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/s/910611b7-b6e5-491c-9d4c-0ca5f6f4224f",
 			},
 			{
 				name: "Sustainment Recommendation",
 				slug: "sustainment-recommendation",
-				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/app/ac976e45-6b32-4cb7-af5c-83a729480db0/view",
+				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/s/ac976e45-6b32-4cb7-af5c-83a729480db0",
 			},
 		],
 	},
@@ -54,12 +54,12 @@ export const CATALOGUE_CATEGORIES: CatalogueCategory[] = [
 			{
 				name: "Network Of Systems Around a Data Object",
 				slug: "network-of-systems-around-a-data-object",
-				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/app/0ec438b1-489a-4f4c-81cc-e819dfbd2afe/view",
+				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/s/0ec438b1-489a-4f4c-81cc-e819dfbd2afe",
 			},
 			{
 				name: "System Removal Impact",
 				slug: "system-removal-impact",
-				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/app/6628e2d7-c53c-4556-a55a-bb7937831739/view",
+				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/s/6628e2d7-c53c-4556-a55a-bb7937831739",
 			},
 		],
 	},
