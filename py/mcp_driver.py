@@ -1,37 +1,7 @@
-# MCP tools for temperature conversion.
+# MCP tools live here. SEMOSS looks for tools in this file.
 #
-# These are simple tools that use the default Playground UI (no custom React UI needed).
-# When an MCP tool has no resourceURI, Playground auto-generates a basic form for it.
+# Simple tools can use the default Playground UI (no custom React UI needed) by
+# omitting resourceURI from @mcp_metadata.
 #
-# After adding or changing tools here, hand-edit mcp/py_mcp.json to match (copy an
-# existing entry). RunMCPTool reads that manifest to dispatch, so an entry is required.
-
-import json
-
-from smssutil import mcp_metadata
-
-
-@mcp_metadata(
-    {
-        "execution": "auto",
-        "displayLocation": "inline",
-        "loadingMessage": "Converting temperature...",
-    }
-)
-def fahrenheit_to_celsius(temperature_f: float) -> str:
-    """Convert a temperature from Fahrenheit to Celsius."""
-    celsius = (temperature_f - 32) * 5 / 9
-    return json.dumps({"fahrenheit": temperature_f, "celsius": round(celsius, 2)})
-
-
-@mcp_metadata(
-    {
-        "execution": "auto",
-        "displayLocation": "inline",
-        "loadingMessage": "Converting temperature...",
-    }
-)
-def celsius_to_fahrenheit(temperature_c: float) -> str:
-    """Convert a temperature from Celsius to Fahrenheit."""
-    fahrenheit = temperature_c * 9 / 5 + 32
-    return json.dumps({"celsius": temperature_c, "fahrenheit": round(fahrenheit, 2)})
+# After adding or changing tools here, hand-edit mcp/py_mcp.json to match.
+# RunMCPTool reads that manifest to dispatch, so an entry is required.

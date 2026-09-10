@@ -3,6 +3,7 @@
 // Each category groups related Insights (SEMOSS apps). Add new categories here
 // and wire a matching route in Router.tsx + routes.constants.ts.
 
+import { NetworkImage, OptimizationImage } from "@/assets";
 import {
 	ROUTE_PATH_OPTIMIZATION_RECOMMENDATION_PAGE,
 	ROUTE_PATH_SYSTEM_NETWORKS_PAGE,
@@ -19,6 +20,7 @@ export interface CatalogueCategory {
 	path: string;
 	title: string;
 	description: string;
+	image: string;
 	insights: CatalogueInsight[];
 }
 
@@ -28,6 +30,7 @@ export const CATALOGUE_CATEGORIES: CatalogueCategory[] = [
 		title: "Optimization & Recommendation",
 		description:
 			"Insights that optimize decisions or recommend a next best action.",
+		image: OptimizationImage,
 		insights: [
 			{
 				name: "System Similarity",
@@ -46,6 +49,7 @@ export const CATALOGUE_CATEGORIES: CatalogueCategory[] = [
 		title: "System Networks",
 		description:
 			"Insights that model, monitor, or analyze networks of connected systems.",
+		image: NetworkImage,
 		insights: [
 			{
 				name: "Network Of Systems Around a Data Object",
