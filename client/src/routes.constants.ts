@@ -5,3 +5,6 @@
 // for consistency.
 
 export const ROUTE_PATH_LOGIN_PAGE = "login";
+export const ROUTE_PATH_OPTIMIZATION_RECOMMENDATION_PAGE =
+	"optimization-recommendation";
+export const ROUTE_PATH_SYSTEM_NETWORKS_PAGE = "system-networks";

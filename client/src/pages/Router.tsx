@@ -15,11 +15,19 @@
 //     LoginPage         - sits OUTSIDE AuthorizedLayout so logged-out users can reach it
 
 import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
-import { ROUTE_PATH_LOGIN_PAGE } from "@/routes.constants";
+import {
+	ROUTE_PATH_LOGIN_PAGE,
+	ROUTE_PATH_OPTIMIZATION_RECOMMENDATION_PAGE,
+	ROUTE_PATH_SYSTEM_NETWORKS_PAGE,
+} from "@/routes.constants";
 import { ErrorPage } from "./ErrorPage";
 import { HomePage } from "./HomePage";
 import { LoginPage } from "./LoginPage";
 import { AuthorizedLayout, InitializedLayout } from "./layouts";
+import { OptimizationRecommendationInsightPage } from "./OptimizationRecommendationInsightPage";
+import { OptimizationRecommendationPage } from "./OptimizationRecommendationPage";
+import { SystemNetworksInsightPage } from "./SystemNetworksInsightPage";
+import { SystemNetworksPage } from "./SystemNetworksPage";
 
 const router = createHashRouter([
 	{
@@ -34,6 +42,30 @@ const router = createHashRouter([
 					{
 						index: true,
 						Component: HomePage,
+					},
+					{
+						path: ROUTE_PATH_OPTIMIZATION_RECOMMENDATION_PAGE,
+						children: [
+							{
+								index: true,
+								Component: OptimizationRecommendationPage,
+							},
+							{
+								path: ":insightSlug",
+								Component:
+									OptimizationRecommendationInsightPage,
+							},
+						],
+					},
+					{
+						path: ROUTE_PATH_SYSTEM_NETWORKS_PAGE,
+						children: [
+							{ index: true, Component: SystemNetworksPage },
+							{
+								path: ":insightSlug",
+								Component: SystemNetworksInsightPage,
+							},
+						],
 					},
 					// To add a new protected page (use a bare path segment, no leading slash):
 					// {
