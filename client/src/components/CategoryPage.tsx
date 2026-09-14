@@ -52,6 +52,9 @@ export const CategoryPage = ({ category }: { category: CatalogueCategory }) => {
 										<CardTitle className="text-base">
 											{insight.name}
 										</CardTitle>
+										<CardDescription>
+											{insight.description}
+										</CardDescription>
 									</CardHeader>
 								</Card>
 							</Link>

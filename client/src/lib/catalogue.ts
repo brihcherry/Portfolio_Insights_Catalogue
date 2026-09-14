@@ -12,6 +12,8 @@ import {
 export interface CatalogueInsight {
 	name: string;
 	slug: string;
+	// TODO: paste a short description of the Insight here.
+	description: string;
 	// TODO: paste the actual Insight URL here to embed it via iframe.
 	url: string;
 }
@@ -27,39 +29,79 @@ export interface CatalogueCategory {
 export const CATALOGUE_CATEGORIES: CatalogueCategory[] = [
 	{
 		path: ROUTE_PATH_OPTIMIZATION_RECOMMENDATION_PAGE,
-		title: "Optimization & Recommendation",
+		title: "System Optimization",
 		description:
-			"Insights that optimize decisions or recommend a next best action.",
+			"Insights that optimize systems and recommend next best actions.",
 		image: OptimizationImage,
 		insights: [
 			{
 				name: "System Similarity",
 				slug: "system-similarity",
-				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/s/910611b7-b6e5-491c-9d4c-0ca5f6f4224f",
+				description: "Learn which systems have the most functional overlap with other systems.",
+				url: "https://workshop.cfg.deloitte.com/SemossWeb/packages/client/dist/#/s/e6cead25-cee0-4602-8efd-34dbe16d056e",
 			},
 			{
 				name: "Sustainment Recommendation",
 				slug: "sustainment-recommendation",
-				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/s/ac976e45-6b32-4cb7-af5c-83a729480db0",
+				description: "Get recommendations for sustaining systems based on current portfolio analysis.",
+				url: "https://workshop.cfg.deloitte.com/SemossWeb/packages/client/dist/#/s/de966362-af5c-4db2-b5bb-36a5d0518bee",
+			},
+			{
+				name: "Network Of Systems Around a Data Object",
+				slug: "network-of-systems-around-a-data-object",
+				description: "View the network of systems that directly send or receive a specific data object.",
+				url: "https://workshop.cfg.deloitte.com/SemossWeb/packages/client/dist/#/s/501fdd3e-68f8-4895-88dc-c117550c6687",
+			},
+			{
+				name: "System Removal Impact",
+				slug: "system-removal-impact",
+				description: "Get a comprehensive overview of each system and its impact on the capability group.",
+				url: "https://workshop.cfg.deloitte.com/SemossWeb/packages/client/dist/#/s/f0174982-32e6-45b0-b7fa-3c3212ef8d0f",
 			},
 		],
 	},
 	{
 		path: ROUTE_PATH_SYSTEM_NETWORKS_PAGE,
-		title: "System Networks",
+		title: "Decommissioning",
 		description:
-			"Insights that model, monitor, or analyze networks of connected systems.",
+			"Insights that support system decommissioning decisions.",
 		image: NetworkImage,
 		insights: [
 			{
-				name: "Network Of Systems Around a Data Object",
-				slug: "network-of-systems-around-a-data-object",
-				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/s/0ec438b1-489a-4f4c-81cc-e819dfbd2afe",
+				name: "Decommissioning Milestone Dashboard",
+				slug: "insight-1",
+				description: "View the milestones and tasks that need to be completed in order to successfully decommission a system.",
+				url: "",
 			},
 			{
-				name: "System Removal Impact",
-				slug: "system-removal-impact",
-				url: "http://localhost:9090/SemossWeb/packages/client/dist/#/s/6628e2d7-c53c-4556-a55a-bb7937831739",
+				name: "Site-Specific Decomissioning Tasks",
+				slug: "insight-2",
+				description: "Display the decomissioning activities that sites bneed to complete prior to, during, and after go-live to ensure the legacy systems are safely decommissioned.",
+				url: "",
+			},
+			{
+				name: "Site Decomissioning Checklist Form",
+				slug: "insight-3",
+				description: ".",
+				url: "Update the status of tasks in the decommissioning checklist.",
+			},
+			{
+				name: "Site Progress Report",
+				slug: "insight-4",
+				description: "View a site's progress with respect to the decomissioning checklist.",
+				url: "",
+			},
+			{
+				name: "Decommissioning Status Tracker - Wave View",
+				slug: "insight-5",
+				description: "Track the real-time status of decommissioning.",
+				url: "",
+			},
+			{
+				name: "Decommissioning Status Tracker - System View",
+				slug: "insight-6",
+				description: "Track the real-time status of decommissioning.",
+				url: "",
 			},
 		],
 	},

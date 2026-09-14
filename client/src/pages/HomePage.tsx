@@ -82,7 +82,7 @@ export const HomePage = () => {
 											fontFamily: "Open Sans, serif",
 										}}
 									>
-										Portfolio Analytics Dashboard
+										Portfolio Analytics
 									</h1>
 								</div>
 								<p className="rounded-md bg-black/30 backdrop-blur-sm px-3 py-2 text-white/90">
@@ -130,6 +130,9 @@ export const HomePage = () => {
 													<CardTitle className="text-base">
 														{insight.name}
 													</CardTitle>
+													<CardDescription>
+														{insight.description}
+													</CardDescription>
 												</CardHeader>
 											</Card>
 										</Link>
