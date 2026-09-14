@@ -41,11 +41,12 @@ export const CategoryPage = ({ category }: { category: CatalogueCategory }) => {
 						</CardHeader>
 					</Card>
 				) : (
-					<div className="grid gap-4 sm:grid-cols-2">
+					<div className="grid auto-rows-40 gap-4 sm:grid-cols-2">
 						{category.insights.map((insight) => (
 							<Link
 								key={insight.slug}
 								to={`/${category.path}/${insight.slug}`}
+								className="h-full"
 							>
 								<Card className="h-full bg-white/90 backdrop-blur-sm transition-colors hover:bg-white">
 									<CardHeader>
